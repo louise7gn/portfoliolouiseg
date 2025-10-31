@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;600&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  /* Thème clair */
+  --rose-light: #f8f7f6;
+  --rose-medium: #e8b0d1;
+  --rose-dark: #b21e6e;
+  --text-color: #2b2b2b;
+  --white: #fff;
+  --card-bg: #fff;
+}
+
+/* Thème sombre */
+body.dark {
+  --rose-light: #000000;
+  --rose-medium: #c89ab5;
+  --rose-dark: #f7b8d4;
+  --text-color: #f4f4f4;
+  --white: #2a2428;
+  --card-bg: #2a2428;
+}
+
+body {
+  margin: 0;
+  background-color: var(--rose-light);
+  color: var(--text-color);
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* Header */
+header {
+  background-color: var(--rose-medium);
+  color: var(--white);
+  padding: 2rem 0 1.5rem 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: background 0.4s;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 1.2rem;
+}
+
+.header-title h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff8fa;
+  opacity: 0.9;
+}
+
+/* Boutons langue + thème */
+.header-buttons {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.header-btn {
+  background-color: var(--rose-dark);
+  color: var(--white);
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.header-btn:hover {
+  background-color: #8e1457;
+}
+
+/* Centrage global des titres */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+/* On garde un style propre et cohérent */
+h2 {
+  color: var(--rose-dark);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+
+/* HOME SECTION */
+.home-container {
+  display: flex;
+  align-items: flex-start; /* ✅ tout en haut */
+  gap: 1.8rem;
+}
+
+
+.home-image {
+  width: 20%; /* 🔽 plus étroite */
+  height: auto;
+  max-height: 220px; /* 🔽 limite visuelle claire */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  align-self: flex-start; /* ✅ empêche de s’étirer avec le texte */
+}
+
+
+.home-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hello-title {
+  font-family: "Poppins", sans-serif; /* ou ta police choisie */
+  font-weight: 800;
+  font-size: 3rem;
+  font-style: italic; /* ✅ italique ajouté */
+  color: var(--rose-dark);
+  margin-bottom: 0.8rem;
+  line-height: 1.1;
+}
+
+
+
+.home-text p {
+  margin: 0;
+  text-align: justify;
+}
+
+/* Responsive: sur mobile l’image passe au-dessus */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Section Engineering Courses */
+#engineering {
+  padding: 2rem 0;
+}
+
+#engineering .project {
+  background-color: var(--rose-light);
+  border-left: 5px solid var(--rose-dark);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+#engineering .project h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--rose-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#engineering .project p {
+  text-align: justify;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+
+#civic .activity {
+  background-color: var(--rose-light);
+  border-left: 5px solid var(--rose-dark);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+#civic .activity h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--rose-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#civic .activity p {
+  text-align: justify;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.civic-image {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 40%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.career-image {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 70%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo-credit {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  margin-top: 0.3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+#sports {
+  padding: 2rem 0;
+}
+
+#sports .activity {
+  background-color: var(--rose-light);
+  border-left: 5px solid var(--rose-dark);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 1.5rem auto;
+}
+
+#sports .activity h3 {
+  text-align: center;
+  color: var(--rose-dark);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+#sports .activity p {
+  text-align: justify;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.activity-image {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 50%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.photo-credit {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--rose-dark);
+}
+
+/* Sections */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  background-color: var(--card-bg);
+  border-radius: 14px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.4s;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 14px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: var(--rose-dark);
+  border-bottom: 2px solid var(--rose-medium);
+  padding-bottom: 0.3em;
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-family: "Poppins", sans-serif;
+  color: var(--rose-dark);
+  border-bottom: 2px solid var(--rose-medium);
+  padding-bottom: 0.3em;
+  font-size: 0.9rem;
+}
+p {
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--rose-medium);
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: background 0.4s;
+}
